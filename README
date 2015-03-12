@@ -1,0 +1,5 @@
+This scripts takes inputs and ouputs of the PBJelly pipeline to reorder the scaffolds and orient them
+
+Requirements: 
+Pyhton 2.7
+blat
