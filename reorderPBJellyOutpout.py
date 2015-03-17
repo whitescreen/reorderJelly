@@ -256,10 +256,12 @@ def getOrientationNucmer(query, reference, prePath):
     nucmerOutput =  os.path.join(prePath,"out")
     nucmerCall = "nucmer -p {} {} {}".format(nucmerOutput,query,reference)
     showCoordsCall = "show-coords -HlTd {}".format(nucmerOutput+".delta")    
-    n = subprocess.Popen([nucmerCall], shell=True)
+    n = subprocess.Popen([nucmerCall], shell=True, stdout = subprocess.PIPE, \
+                        stderr = subprocess.PIPE)
     nReturn = n.wait()
     
-    s = subprocess.Popen([showCoordsCall], shell=True)
+    s = subprocess.Popen([showCoordsCall], shell=True, stdout = subprocess.PIPE, \
+                        stderr = subprocess.PIPE)
     sReturn = s.wait()
     
     #check if one of them crashed 
