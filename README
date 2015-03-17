@@ -1,5 +1,6 @@
 This scripts takes inputs and ouputs of the PBJelly pipeline to reorder the scaffolds and orient them
 
 Requirements: 
-Pyhton 2.7
-blat
+
+- Python 2.7
+- BLAT and pslReps from the blat package (Tested with version v. 35x1, others migth work) 
