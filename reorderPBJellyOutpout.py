@@ -444,8 +444,8 @@ if __name__ == '__main__':
                 fR.write(scaffoldRecordC.get_fasta_string())
                 
             elif orientation is None:
-                sys.stderr.write("Nucmer crashed trying to align {} and {}, asuming + orientation\n".\
-                                 format(scaffoldO,lookUpRC[scaffoldR]))
+                sys.stderr.write("{} crashed trying to align {} and {}, asuming + orientation\n".\
+                                 format(aligner,scaffoldO,lookUpRC[scaffoldR]))
                 fR.write(scaffoldRecordC.get_fasta_string())
 
             #keep track of scaffolds that we allready output    
